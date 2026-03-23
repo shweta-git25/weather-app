@@ -147,3 +147,7 @@ mvnw.cmd test
 ## 📬 Postman Collection
 
 Refer to attached Postman collection for API testing.
+
+## Documentation
+
+[The Weather App](WeatherApplication.docx)

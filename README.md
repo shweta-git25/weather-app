@@ -22,7 +22,7 @@ This project is a RESTful backend service that ingests and queries weather senso
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/shweta-git25/weather-app.git
 cd weather-app
 ```
 

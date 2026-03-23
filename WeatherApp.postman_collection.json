@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "8f996416-0e80-46c3-ab17-8a0957a647e8",
+		"name": "WeatherApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33335711"
+	},
+	"item": [
+		{
+			"name": "insertData",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"sensorName\": \"sensor-2\",\r\n        \"temperature\": 25.5,\r\n        \"humidity\": 60,\r\n        \"windSpeed\": 10.2,\r\n        \"timestamp\": \"2026-03-20T10:00:00\"\r\n    },\r\n    {\r\n        \"sensorName\": \"sensor-2\",\r\n        \"temperature\": 32.5,\r\n        \"humidity\": 65,\r\n        \"windSpeed\": 8.2,\r\n        \"timestamp\": \"2026-03-02T10:00:00\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/sensors/insertData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sensors",
+						"insertData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/sensors/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sensors",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "name/{sensorName}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/sensors/name/sensor-2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sensors",
+						"name",
+						"sensor-2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "querySensorData",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"sensorNames\": [\"sensor-1\", \"sensor-2\"],\r\n  \"metrics\": [\"temperature\", \"humidity\"],\r\n  \"stats\": [\"min\", \"avg\", \"max\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/sensors/querySensorData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sensors",
+						"querySensorData"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
